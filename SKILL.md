@@ -13,14 +13,14 @@ Use this skill for ExamTopics scraping and extraction workflows. Prefer this ski
 
 This skill bundles the executable helpers under `scripts/`:
 Use these bundled scripts from the skill directory:
-
+```text
 examtopics-pipeline/
-├── SKILL.md                    This file
-├── scripts/
-  ├── fetch_discussion_pages.py   Script to fetch discussion page links for a topic.
-  ├── fetch_question_response_bodies.py   Script to fetch HTML bodies for a specific exam code.
-  ├── extract_question_answers.py   Script to extract question-answer pairs from saved HTML bodies, with support for image placeholders.
- 
+├── SKILL.md                          This file
+└── scripts/
+    ├── fetch_discussion_pages.py        Script to fetch discussion page links for a topic.
+    ├── fetch_question_response_bodies.py Script to fetch HTML bodies for a specific exam code.
+    └── extract_question_answers.py       Script to extract question-answer pairs from saved HTML bodies, with support for image placeholders.
+```
 
 Keep new helper code in `scripts/` so the skill remains self-contained and portable.
 
