@@ -1,4 +1,4 @@
-# ExamTopics skill
+# ExamTopics Pipeline Skill
 
 ## Giới thiệu
 ExamTopics Pipeline là bộ công cụ hỗ trợ thu thập và trích xuất dữ liệu từ các topic ExamTopics, bao gồm danh sách discussion, HTML nội dung thảo luận, và bộ câu hỏi đáp án theo từng exam code.
@@ -17,7 +17,6 @@ Dùng để chuẩn hóa quá trình lấy dữ liệu ExamTopics theo từng to
 - `fetch_discussion_pages.py`: thu thập link discussion theo topic.
 - `fetch_question_response_bodies.py`: tải nội dung HTML theo exam code.
 - `extract_question_answers.py`: trích xuất câu hỏi và đáp án từ HTML.
-- `full_pipeline_processor.py`: xử lý lại toàn bộ dữ liệu từ corpus đã có.
 
 ## Đầu ra điển hình
 - `discussion_links.csv`
@@ -30,3 +29,32 @@ Dữ liệu nên được lưu theo dạng:
 `./<topic>/scan_<timestamp>/`
 
 Cấu trúc này giúp dễ theo dõi từng lần quét, tái xử lý, và so sánh kết quả giữa các lần chạy.
+
+## Cài đặt vào `~/.claude/skills/`
+1. Clone repository về máy:
+
+```bash
+git clone https://github.com/vuongnv3389-sec/examtopic-skill.git
+```
+
+2. Tạo thư mục đích nếu chưa có:
+
+```bash
+mkdir -p ~/.claude/skills/examtopics-pipeline/
+```
+
+3. Chép toàn bộ file của skill vào thư mục đó:
+
+```bash
+cd examtopic-skill
+cp SKILL.md ~/.claude/skills/examtopics-pipeline/
+cp -r scripts ~/.claude/skills/examtopics-pipeline/
+```
+
+4. Mở thư mục skill trong VS Code để kiểm tra lại cấu trúc:
+
+```bash
+code ~/.claude/skills/examtopics-pipeline/
+```
+
+5. Xác nhận bên trong thư mục đích có đủ `SKILL.md` và `scripts/`.
